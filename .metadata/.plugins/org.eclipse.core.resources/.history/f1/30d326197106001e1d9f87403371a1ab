@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>패스워드 에러</title>
+</head>
+<body>
+	<h1>비밀번호가 올바르지 않습니다.</h1>
+</body>
+</html>

@@ -1,0 +1,67 @@
+package com.jumin.springbootProject.member.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.jumin.springbootProject.member.controller.dto.JoinRequest;
+import com.jumin.springbootProject.member.service.MemberService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+public class MemberController {
+	
+	private final MemberService memberService;
+
+	@GetMapping("/member/hello")
+	public ModelAndView getHello() {
+		ModelAndView mav = new ModelAndView("html/hello");
+		return mav;
+
+	}
+	
+	@GetMapping("/member/join")
+	public ModelAndView getJoin() {
+		ModelAndView mav = new ModelAndView("html/join");
+		return mav;
+		
+	}
+	
+	@PostMapping("/member/join")
+	public ModelAndView join(JoinRequest joinRequest) {
+		String id = joinRequest.getId();
+		String name = joinRequest.getName();
+		String phoneNumber = joinRequest.getPhoneNumber();
+		
+		String result = memberService.join(id, name, phoneNumber);
+		
+		System.out.println("@@@@@@@@@@@check@@@@@@@@@@");
+		
+		ModelAndView mavSuccess = new ModelAndView("html/joinSuccess");
+		ModelAndView mavFail = new ModelAndView("html/joinFail");
+		
+		if(result.equalsIgnoreCase("success")) {
+			return mavSuccess;
+		}else {
+			return mavFail;
+		}
+		
+	}
+	
+	@GetMapping("/member/login")
+	public ModelAndView getLogin() {
+		ModelAndView mav = new ModelAndView("html/login");
+		return mav;
+	}
+	
+	@PostMapping("/member/login")
+	public String Login() {
+		return "login";
+		
+	}
+}

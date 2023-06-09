@@ -1,0 +1,21 @@
+package com.jumin.springbootProject.service;
+
+import org.springframework.stereotype.Service;
+
+import com.jumin.springbootProject.dto.MemberDTO;
+import com.jumin.springbootProject.repository.MemberRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MemberService {
+	
+	private final MemberRepository memberRepository;
+
+	public void save(MemberDTO memberDTO) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

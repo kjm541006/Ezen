@@ -1,0 +1,59 @@
+package com.jumin.springbootProject.member.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.jumin.springbootProject.member.controller.dto.JoinRequest;
+import com.jumin.springbootProject.member.service.MemberService;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+public class MemberController {
+	
+	private final MemberService memberService;
+
+	@GetMapping("member/hello")
+	public String getHello() {
+		return "html/hello";
+
+	}
+	
+	@GetMapping("member/join")
+	public String getJoin() {
+		return "html/join";
+		
+	}
+	
+	@PostMapping("member/join")
+	public String join(@RequestBody JoinRequest joinRequest) {
+		String id = joinRequest.getId();
+		String name = joinRequest.getName();
+		String phoneNumber = joinRequest.getPhoneNumber();
+		
+		String result = memberService.join(id, name, phoneNumber);
+		
+//		System.out.println(result);
+		
+		if(result.equalsIgnoreCase("success")) {
+			return "success";
+		}else {
+			return "fail";
+		}
+		
+	}
+	
+	@GetMapping("member/login")
+	public String getLogin() {
+		return "html/login";
+	}
+	
+	@PostMapping("member/login")
+	public String Login() {
+		return null;
+		
+	}
+}

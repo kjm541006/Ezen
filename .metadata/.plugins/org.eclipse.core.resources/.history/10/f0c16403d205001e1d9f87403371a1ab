@@ -1,0 +1,5 @@
+package com.jumin.springbootProject.repository;
+
+public interface MemberRepository {
+
+}

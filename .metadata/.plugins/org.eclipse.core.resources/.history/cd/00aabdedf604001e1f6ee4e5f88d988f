@@ -1,0 +1,31 @@
+package com.jumin.springbootProject.member.repository;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.jumin.springbootProject.member.repository.entity.Member;
+
+@SpringBootTest
+public class MemberRepositoryTest {
+
+	
+	@Autowired
+	private MemberRepository memberRepository;
+	
+	@Test
+	public void crudTest(){
+		Member member = Member.builder()
+				.id("아이디")
+				.name("이름")
+				.PhoneNumber("010-0000-0000")
+				.build();
+	
+	// createTest
+	memberRepository.save(member);
+	
+	// getTest
+	Member foundMember = memberRepository.findById(1L).get();
+	
+	}
+}

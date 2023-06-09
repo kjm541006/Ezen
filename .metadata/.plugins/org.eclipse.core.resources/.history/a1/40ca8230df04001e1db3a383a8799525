@@ -1,0 +1,5 @@
+package com.jumin.springbootProject.member.service;
+
+public class MemberService {
+
+}

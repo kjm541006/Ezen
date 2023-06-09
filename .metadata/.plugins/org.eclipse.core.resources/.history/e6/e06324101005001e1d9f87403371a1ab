@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<span>login Page</span>
+	<form action="/login" method="post">
+		<span>아이디: </span>
+		<input type="text" placeholder="아이디" />
+		<span비밀번호: </span>
+		<input type="password" placeholder="비밀번" />
+	</form>
+</body>
+</html>

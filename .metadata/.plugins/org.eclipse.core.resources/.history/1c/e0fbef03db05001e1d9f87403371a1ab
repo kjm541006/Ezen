@@ -1,0 +1,32 @@
+package com.jumin.springbootProject.service;
+
+import org.springframework.stereotype.Service;
+
+import com.jumin.springbootProject.dto.MemberDTO;
+import com.jumin.springbootProject.entity.MemberEntity;
+import com.jumin.springbootProject.repository.MemberRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MemberService {
+	
+	private final MemberRepository memberRepository;
+
+	public void save(MemberDTO memberDTO) {
+		// 1. dto -> entity
+		MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
+		memberRepository.save(memberEntity);
+		// 2. 
+		
+		// repository의 save 메서드호출 (entity객체 넘김)
+		
+	}
+
+	public MemberDTO login(MemberDTO memberDTO) {
+		memberRepository.findByMemberId(memberDTO.getId());
+		return null;
+	}
+
+}

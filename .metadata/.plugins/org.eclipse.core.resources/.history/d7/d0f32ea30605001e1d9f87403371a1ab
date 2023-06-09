@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>메인페이지</h1>
+	<span>로그인 및 회원가입 구현</span>
+	<br />
+	<a href="/join">Go to Join</a>
+	<br />
+	<a href="/hello">Go to Hello</a>
+	<br />
+	<a href="/login">로그인</a>
+</body>
+</html>

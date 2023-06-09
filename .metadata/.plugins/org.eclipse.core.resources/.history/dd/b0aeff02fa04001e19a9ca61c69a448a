@@ -1,0 +1,20 @@
+package com.jumin.springbootProject.member.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MemberController {
+
+	@GetMapping("/hello")
+	public String getHello() {
+		return "Hello 뜨냐?";
+
+	}
+	
+	@PostMapping("/join")
+	public String join() {
+		return "join";
+	}
+}

@@ -1,0 +1,21 @@
+package com.jumin.springbootProject.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class MemberController {
+
+	@GetMapping("/member/join")
+	public String joinForm() {
+		return "join";
+	}
+	
+	@PostMapping("member/join")
+	public String join() {
+		System.out.println("MemberController.save");
+		return null;
+	}
+	
+}

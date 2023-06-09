@@ -1,0 +1,1148 @@
+!SESSION 2023-06-01 10:51:34.437 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-01 10:51:35.590
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-01 10:52:33.637
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-01 10:52:34.298
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-01 10:52:34.298
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:00:50.849
+!MESSAGE Using unsafe http transport to retrieve http://www.thymeleaf.org/eclipse-plugin-update-site/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:00:52.166
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/2.1.2/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:00:52.985
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.0/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:00:53.556
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.1/content.jar
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2023-06-01 11:01:04.167
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2023-06-01 11:01:04.167
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.167
+!MESSAGE Software being installed: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.167
+!MESSAGE Missing requirement: Thymeleaf Content Assist 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.feature.group 3.0.1.202109120458) requires 'org.eclipse.equinox.p2.iu; org.eclipse.wst.html.ui 1.1.200' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2023-06-01 11:01:04.167
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.167
+!MESSAGE From: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.167
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.thymeleaf.extras.eclipse.contentassist.feature.feature.group [3.0.1.202109120458,3.0.1.202109120458]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2023-06-01 11:01:04.170
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2023-06-01 11:01:04.170
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.170
+!MESSAGE Software being installed: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.170
+!MESSAGE Missing requirement: Thymeleaf Content Assist 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.feature.group 3.0.1.202109120458) requires 'org.eclipse.equinox.p2.iu; org.eclipse.wst.html.ui 1.1.200' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2023-06-01 11:01:04.170
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.170
+!MESSAGE From: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.170
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.thymeleaf.extras.eclipse.contentassist.feature.feature.group [3.0.1.202109120458,3.0.1.202109120458]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2023-06-01 11:01:04.173
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2023-06-01 11:01:04.173
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE Software being installed: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE Missing requirement: Thymeleaf Content Assist 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.feature.group 3.0.1.202109120458) requires 'org.eclipse.equinox.p2.iu; org.eclipse.wst.html.ui 1.1.200' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2023-06-01 11:01:04.173
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE From: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.thymeleaf.extras.eclipse.contentassist.feature.feature.group [3.0.1.202109120458,3.0.1.202109120458]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2023-06-01 11:01:04.173
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2023-06-01 11:01:04.173
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE Software being installed: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE Missing requirement: Thymeleaf Content Assist 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.feature.group 3.0.1.202109120458) requires 'org.eclipse.equinox.p2.iu; org.eclipse.wst.html.ui 1.1.200' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2023-06-01 11:01:04.173
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE From: Thymeleaf Content Assist source code 3.0.1.202109120458 (org.thymeleaf.extras.eclipse.contentassist.feature.source.feature.group 3.0.1.202109120458)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2023-06-01 11:01:04.173
+!MESSAGE To: org.eclipse.equinox.p2.iu; org.thymeleaf.extras.eclipse.contentassist.feature.feature.group [3.0.1.202109120458,3.0.1.202109120458]
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:01:43.582
+!MESSAGE Using unsafe http transport to retrieve http://www.thymeleaf.org/eclipse-plugin-update-site/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:01:44.651
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/2.1.2/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:01:44.921
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.0/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-01 11:01:45.458
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.1/artifacts.jar
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:03.334
+!MESSAGE Classpath changed for project: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:04.050
+!MESSAGE Classpath changed for project: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:04.051
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:04.051
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:04.061
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:04.073
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-01 11:11:04.075
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 38011
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:04.293
+!MESSAGE Classpath changed for project: lec05_thymeleaf
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-01 11:11:04.732
+!MESSAGE Could not download sources for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:584)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:228)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:553)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:538)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:282)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2023-06-01 11:11:04.733
+!MESSAGE Could not resolve artifact antlr:antlr:jar:sources:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2023-06-01 11:11:04.733
+!MESSAGE Missing antlr:antlr:jar:sources:2.7.7
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 11:11:11.953
+!MESSAGE Classpath changed for project: lec05_thymeleaf
+!SESSION 2023-06-01 13:07:30.907 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-01 13:07:32.106
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-01 13:07:33.643
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-01 13:07:34.666
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-01 13:07:34.666
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 13:07:35.987
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-01 13:07:35.997
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 5074
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 13:07:36.613
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 13:07:36.614
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-01 13:07:36.615
+!MESSAGE Started Boot LS process
+!SESSION 2023-06-04 15:55:39.051 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-04 15:55:40.564
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-04 15:55:41.364
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-04 15:55:42.543
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-04 15:55:42.543
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 15:55:43.973
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-04 15:55:43.992
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 886
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 15:55:44.635
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 15:55:44.636
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 15:55:44.640
+!MESSAGE Started Boot LS process
+!SESSION 2023-06-04 16:14:13.239 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-04 16:14:14.090
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-04 16:14:15.040
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-04 16:14:16.405
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-04 16:14:16.405
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 16:14:17.908
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-04 16:14:17.923
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 1187
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 16:14:18.664
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 16:14:18.665
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 16:14:18.665
+!MESSAGE Started Boot LS process
+!SESSION 2023-06-04 23:07:08.415 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-04 23:07:08.946
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-04 23:07:09.602
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-04 23:07:10.725
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-04 23:07:10.725
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 23:07:12.060
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-04 23:07:12.074
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 1393
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 23:07:12.714
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 23:07:12.715
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-04 23:07:12.715
+!MESSAGE Started Boot LS process
+!SESSION 2023-06-05 15:31:12.602 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-05 15:31:13.129
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-05 15:31:13.788
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-05 15:31:14.886
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-05 15:31:14.886
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-05 15:31:16.235
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-05 15:31:16.250
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 1170
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-05 15:31:16.876
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-05 15:31:16.876
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-05 15:31:16.876
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-05 15:38:40.701
+!MESSAGE Classpath changed for project: lec00_project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-05 15:38:40.701
+!MESSAGE Boot project ADDED: lec00_project
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2023-06-05 15:38:41.460
+!MESSAGE Could not download javadoc for antlr:antlr:2.7.7
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.lambda$6(MavenImpl.java:584)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:228)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:553)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.resolve(MavenImpl.java:538)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.download(DownloadSourcesJob.java:308)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadAttachments(DownloadSourcesJob.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadMaven(DownloadSourcesJob.java:252)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.downloadFilesAndPopulateToUpdate(DownloadSourcesJob.java:220)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.lambda$0(DownloadSourcesJob.java:149)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:394)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:275)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:214)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:294)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Contains: Missing antlr:antlr:jar:javadoc:2.7.7
+!SUBENTRY 1 org.eclipse.m2e.core 4 -1 2023-06-05 15:38:41.461
+!MESSAGE Could not resolve artifact antlr:antlr:jar:javadoc:2.7.7
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2023-06-05 15:38:41.461
+!MESSAGE Missing antlr:antlr:jar:javadoc:2.7.7
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 00:07:31.374
+!MESSAGE Classpath changed for project: lec00_project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 00:07:31.376
+!MESSAGE Boot project REMOVED: lec00_project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 00:10:15.883
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 00:10:15.884
+!MESSAGE Boot project ADDED: project
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 00:10:54.793
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 00:10:54.793
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-07 11:58:32.187
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-07 12:22:40.703
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2023-06-07 12:54:44.312 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 12:54:44.852
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 12:54:45.552
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 12:54:46.696
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 12:54:46.696
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 12:54:48.738
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 12:54:48.738
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 12:54:49.261
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 12:54:49.262
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 12:54:49.264
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 12:54:49.277
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 12:54:49.277
+!MESSAGE Boot project ADDED: project
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-07 12:54:49.285
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 7430
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-07 14:40:30.286
+!MESSAGE Could not get hover region due to timeout after 1000 miliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverRegion(LSPTextHover.java:155)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverRegion(CompositeTextHover.java:101)
+	at org.eclipse.jface.text.TextViewerHoverManager.computeInformation(TextViewerHoverManager.java:128)
+	at org.eclipse.jface.text.AbstractInformationControlManager.doShowInformation(AbstractInformationControlManager.java:1101)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager$MouseTracker.mouseHover(AbstractHoverInformationControlManager.java:511)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:212)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4646)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1547)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1532)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1325)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4413)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3989)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-06-07 14:40:30.982
+!MESSAGE InterruptedException
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:76)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverInfo2(CompositeTextHover.java:60)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:45:29.664
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:45:29.691
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:45:30.988
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:46:15.607
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:46:15.698
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:46:16.756
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:46:42.133
+!MESSAGE Classpath changed for project: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:46:50.585
+!MESSAGE Classpath changed for project: project
+!SESSION 2023-06-07 14:48:45.965 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 14:48:46.511
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 14:48:47.204
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 14:48:48.323
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 14:48:48.323
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:48:49.806
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-07 14:48:49.808
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 8868
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:48:50.077
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:48:50.077
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:48:50.077
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 14:48:50.078
+!MESSAGE Boot project ADDED: project
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 14:50:43.478
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 14:50:43.478
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-07 15:00:12.594
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:39:48.530
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:39:51.685
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:39:53.186
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:39:54.287
+!MESSAGE Using unsafe http transport to retrieve http://emmet.io/eclipse/updates, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:39:57.553
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/drops/release/1.2.2/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:11.340
+!MESSAGE Using unsafe http transport to retrieve http://www.thymeleaf.org/eclipse-plugin-update-site/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:11.818
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/2.1.2/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:12.066
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.0/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:12.330
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.1/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:17.779
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:20.968
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:22.670
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:27.307
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/drops/release/1.2.2/artifacts.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:47.623
+!MESSAGE Using unsafe http transport to retrieve http://emmet.io/eclipse/updates, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:51.141
+!MESSAGE Using unsafe http transport to retrieve http://www.thymeleaf.org/eclipse-plugin-update-site/, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:53.191
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/2.1.2/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:53.805
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.0/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-06-07 15:40:54.418
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/thymeleaf/thymeleaf-extras-eclipse-plugin/update-site/3.0.1/artifacts.jar
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2023-06-07 15:40:56.068
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,io.emmet.eclipse,1.0.0.201401132323.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2023-06-07 15:40:56.068
+!MESSAGE No digest algorithm is available to verify download of org.eclipse.update.feature,io.emmet.eclipse,1.0.0.201401132323.
+!SESSION 2023-06-07 15:41:25.068 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.springframework.boot.ide.branding.sts4 -keyring /Users/jumin/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 15:41:26.182
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 15:41:27.103
+!MESSAGE Logback config file: /Users/jumin/EzenAcademy/07.spring/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 15:41:28.135
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 15:41:28.135
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 15:41:30.092
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 15:41:30.092
+!MESSAGE A conflict occurred for COMMAND+SHIFT+C:
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand,Toggle Line Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.toggleLineCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+SHIFT+C,
+	ParameterizedCommand(Command(org.springframework.tooling.boot.ls.ToggleComment,Toggle Comment,
+		,
+		Category(org.springframework.ide.eclipse.commands,Spring Generic Text Editor,Spring Language Server Commands,true),
+		WorkbenchHandlerServiceHandler("org.springframework.tooling.boot.ls.ToggleComment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 15:41:30.092
+!MESSAGE A conflict occurred for COMMAND+SHIFT+/:
+Binding(COMMAND+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand,Add Block Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+SHIFT+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.toggle_comment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 15:41:30.092
+!MESSAGE A conflict occurred for COMMAND+D:
+Binding(COMMAND+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.delete.line"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(COMMAND+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.match_pair_outward"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 15:41:30.402
+!MESSAGE Boot project ADDED: lec05_thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 15:41:30.412
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 15:41:30.419
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 15:41:30.419
+!MESSAGE Boot project ADDED: project
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 15:41:30.426
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-07 15:41:30.429
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 9802
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-07 16:24:06.209
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-07 17:01:06.240
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-06-08 12:09:14.474
+!MESSAGE [Error]	Error while computing completions for file:///Users/jumin/EzenAcademy/07.spring/project/src/main/resources/templates/html/joinFail.html: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+Error: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+    at e.create (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:752161)
+    at mt (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:820493)
+    at ht.computeCompletions (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:819762)
+    at vt.doComplete2 (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:821587)
+    at doComplete (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1369135)
+    at /Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1355321
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-06-08 12:09:15.445
+!MESSAGE [Error]	Error while computing completions for file:///Users/jumin/EzenAcademy/07.spring/project/src/main/resources/templates/html/joinFail.html: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+Error: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+    at e.create (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:752161)
+    at mt (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:820493)
+    at ht.computeCompletions (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:819762)
+    at vt.doComplete2 (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:821587)
+    at doComplete (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1369135)
+    at /Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1355321
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-06-08 12:09:15.475
+!MESSAGE [Error]	Error while computing completions for file:///Users/jumin/EzenAcademy/07.spring/project/src/main/resources/templates/html/joinFail.html: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+Error: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+    at e.create (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:752161)
+    at mt (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:820493)
+    at ht.computeCompletions (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:819762)
+    at vt.doComplete2 (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:821587)
+    at doComplete (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1369135)
+    at /Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1355321
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-06-08 12:09:15.716
+!MESSAGE [Error]	Error while computing completions for file:///Users/jumin/EzenAcademy/07.spring/project/src/main/resources/templates/html/joinFail.html: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+Error: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+    at e.create (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:752161)
+    at mt (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:820493)
+    at ht.computeCompletions (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:819762)
+    at vt.doComplete2 (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:821587)
+    at doComplete (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1369135)
+    at /Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1355321
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-06-08 12:09:15.752
+!MESSAGE [Error]	Error while computing completions for file:///Users/jumin/EzenAcademy/07.spring/project/src/main/resources/templates/html/joinFail.html: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+Error: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]
+    at e.create (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:752161)
+    at mt (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:820493)
+    at ht.computeCompletions (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:819762)
+    at vt.doComplete2 (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:821587)
+    at doComplete (/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1369135)
+    at /Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/vscode-html-languageserver/dist/node/htmlServerMain.js:1:1355321
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-08 14:27:16.385
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-08 15:57:07.199
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 16:26:58.051
+!MESSAGE Classpath changed for project: project-1
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-08 16:26:58.052
+!MESSAGE Boot project ADDED: project-1
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-08 16:42:18.692
+!MESSAGE Unable to compute end of document
+!STACK 0
+org.eclipse.jface.text.BadLocationException
+	at org.eclipse.jface.text.TreeLineTracker.fail(TreeLineTracker.java:1054)
+	at org.eclipse.jface.text.TreeLineTracker.lineByOffset(TreeLineTracker.java:268)
+	at org.eclipse.jface.text.TreeLineTracker.getLineNumberOfOffset(TreeLineTracker.java:1122)
+	at org.eclipse.jface.text.AbstractLineTracker.getLineNumberOfOffset(AbstractLineTracker.java:246)
+	at org.eclipse.jface.text.AbstractDocument.getLineOfOffset(AbstractDocument.java:872)
+	at org.eclipse.core.internal.filebuffers.SynchronizableDocument.getLineOfOffset(SynchronizableDocument.java:334)
+	at org.eclipse.lsp4e.LSPEclipseUtils.toPosition(LSPEclipseUtils.java:174)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:44)
+	at org.eclipse.lsp4e.operations.inlayhint.InlayHintProvider.provideCodeMinings(InlayHintProvider.java:80)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.lambda$2(CodeMiningManager.java:189)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.getCodeMinings(CodeMiningManager.java:195)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.updateCodeMinings(CodeMiningManager.java:140)
+	at org.eclipse.jface.internal.text.codemining.CodeMiningManager.run(CodeMiningManager.java:129)
+	at org.eclipse.jface.text.source.SourceViewer.updateCodeMinings(SourceViewer.java:1333)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaCodeMiningReconciler.reconciled(JavaCodeMiningReconciler.java:51)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1681)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:228)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:171)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:115)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-08 16:56:20.399
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-08 18:09:55.569
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2023-06-09 10:22:01.812
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Error in Java Model (code 969): findByMemberId(String) [in MemberRepository [in [Working copy] MemberRepository.java [in com.jumin.springbootProject.repository [in src/main/java [in project-1]]]]] does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:574)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:617)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:328)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:314)
+	at org.eclipse.jdt.internal.core.SourceRefElement.getSourceRange(SourceRefElement.java:233)
+	at org.eclipse.jdt.internal.core.Member.getJavadocRange(Member.java:301)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContentFromSource(JavadocContentAccess2.java:645)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:521)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:748)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:666)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:658)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.lambda$0(LSJavaHoverProvider.java:63)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-09 10:22:01.813
+!MESSAGE findByMemberId(String) [in MemberRepository [in [Working copy] MemberRepository.java [in com.jumin.springbootProject.repository [in src/main/java [in project-1]]]]] does not exist
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-09 11:22:19.477
+!MESSAGE [Info]	ESLint server running in node v18.16.0
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-09 11:22:19.492
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.0.4 from path "/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wildwebdeveloper_1.0.5.202304171630/node_modules/typescript/lib/tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-09 11:22:19.493
+!MESSAGE [Info]	Typescript Server version info: {version=5.0.4, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-09 11:22:20.487
+!MESSAGE [Info]	No ES Library found for file: file:///Users/jumin/EzenAcademy/07.spring/project-1/src/main/resources/templates/join.js
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-09 11:24:17.200
+!MESSAGE [Info]	No ES Library found for file: file:///Users/jumin/EzenAcademy/07.spring/project-1/src/main/resources/static/join.js
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-09 11:53:02.837
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-09 12:26:41.100
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 2 0 2023-06-09 12:28:31.244
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

@@ -1,0 +1,31 @@
+package com.jumin.springbootProject.dto;
+
+import com.jumin.springbootProject.entity.MemberEntity;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class MemberDTO {
+
+	private Long mIndex;
+	private String id;
+	private String password;
+	private String name;
+	
+	public static MemberDTO toMemberDTO(MemberEntity memberEntity) {
+		MemberDTO memberDTO = new MemberDTO();
+		memberDTO.setMIndex(memberEntity.getMemberIndex());
+		memberDTO.setId(memberEntity.getMemberId());
+		memberDTO.setPassword(memberEntity.getMemberPwd());
+		memberDTO.setName(memberEntity.getMemberName());
+		return memberDTO;
+	}
+}
