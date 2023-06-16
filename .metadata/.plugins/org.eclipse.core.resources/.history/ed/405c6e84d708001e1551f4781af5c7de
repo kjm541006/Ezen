@@ -1,0 +1,35 @@
+package com.jumin.springbootProject.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.jumin.springbootProject.dto.ProductDTO;
+import com.jumin.springbootProject.entity.ProductEntity;
+import com.jumin.springbootProject.repository.ProductRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class ProductService {
+
+	private final ProductRepository productRepository;
+	
+	public String save(ProductDTO productDTO) {
+		// dto -> entity
+		Optional<ProductEntity> byName = productRepository.findByName(productDTO.getName());
+		if(byName.isPresent()) {
+			return "fail";
+		}else {
+			return "success";
+		}
+	}
+	
+	public List<ProductEntity> getAllProducts(){
+		return productRepository.getAllProducts();
+		
+	}
+	
+}

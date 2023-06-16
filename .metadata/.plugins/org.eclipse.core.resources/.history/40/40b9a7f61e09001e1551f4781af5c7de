@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<title>order</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header-top" th:if="${session.loginId == null}">
+			<ul class="header-top-list">
+				<a href="/member/join">Join</a>
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/login">Log In</a>
+			</ul>
+		</div>
+		<div class="header-top" th:if="${session.loginId != null}">
+			<ul class="header-top-list">
+				<span th:text="${#session.getAttribute('loginName')} + '님 환영합니다'">
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/logout">로그아웃</a>
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/delete">회원탈퇴</a>
+			</ul>
+		</div>
+		<div class="header-logo">
+			<a href="/">SHOP</a>
+		</div>
+	</header>
+	<nav class="header-nav">
+		<div class="header-top-nav">
+			<div class="header-top-nav-best header-top-nav-child">
+				<a href="/best">BEST</a>
+			</div>
+			<div class="header-top-nav-new header-top-nav-child">
+				<a href="/new">NEW</a>
+			</div>
+			<div class="header-top-nav-sale header-top-nav-child">
+				<a href="/sale">SALE</a>
+			</div>
+		</div>
+	</nav>
+	<main class="main">
+		<div class="order-details" th:each="order: ${orders}">>
+			<div class="product-name" th:text="|상품명: ${product.name}"></div>
+		</div>
+	</main>
+</body>
+</html>

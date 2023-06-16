@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-	@GetMapping("/")
+	@GetMapping("/best")
 	public String index() {
-		return "index";
+		return "best";
 	}
 }

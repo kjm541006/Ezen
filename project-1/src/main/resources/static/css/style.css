@@ -1,0 +1,109 @@
+body{
+	box-sizing: border-box;
+	position: relative;
+	background-color: whitesmoke;
+}
+
+a{
+	text-decoration: none;
+	color: rgba(44, 44, 44, 1);
+}
+
+
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover {
+	cursor: pointer;
+}
+
+
+.header{
+	margin: 0 auto;
+	
+}
+
+.header-top {
+  height: 25px;
+  background-color:white; /* 검은색과 흰색을 섞어 사용 */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s; /* 트랜지션 효과 추가 */
+}
+
+.header-top-list > a:hover {
+  text-decoration: underline;
+}
+
+.header-logo {
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-nav {
+  height: 60px;
+  margin: 0 auto;
+  background-color: ghostwhite;
+  opacity: 1;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.header-top-nav {
+  height: 100%;
+  padding: 0 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-top-nav-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 200px;
+  padding: 0 50px;
+  margin: 0 5px;
+}
+
+.header-top-nav-child > a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.header-top-nav-child:hover {
+  cursor: pointer;
+  background-color: #e6e6e6; /* 배경색을 어울리는 색으로 변경 */
+  transition: background-color 0.3s ease; /* 트랜지션 적용 */
+}
+
+
+.header-top-nav-child:hover > a {
+  color: black;
+}
+
+.header-nav-active {
+  background-color: aliceblue;
+}
+
+.header-nav-active > a {
+  color: black;
+}
+
+.footer{
+	margin-top: 30px;
+	height: 200px;
+	background-color: rgba(44, 44, 44, 0.8);
+	
+}

@@ -1,0 +1,172 @@
+package com.jumin.springbootProject.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.jumin.springbootProject.dto.MemberDTO;
+import com.jumin.springbootProject.entity.CartEntity;
+import com.jumin.springbootProject.entity.ProductEntity;
+import com.jumin.springbootProject.service.CartService;
+import com.jumin.springbootProject.service.MemberService;
+import com.jumin.springbootProject.service.MemberService.LoginResult;
+import com.jumin.springbootProject.service.ProductService;
+
+@Controller
+@RequestMapping("/")
+public class CartController {
+    private final CartService cartService;
+    private final ProductService productService;
+    private final MemberService memberService;
+
+    @Autowired
+    public CartController(CartService cartService, ProductService productService, MemberService memberService) {
+        this.cartService = cartService;
+        this.productService = productService;
+        this.memberService = memberService;
+    }
+
+    // ... 다른 메서드 생략 ...
+    
+    @PostMapping("/order")
+    public String addToCart(HttpSession session,
+                            @RequestParam("productIds") List<Long> productIds,
+                            @RequestParam("quantities") List<Integer> quantities) {
+        String loginId = (String) session.getAttribute("loginId");
+        if (loginId == null) {
+            // 로그인되지 않았을 경우 처리 로직 추가
+            return "redirect:/login";
+        }
+
+        for (int i = 0; i < productIds.size(); i++) {
+            Long productId = productIds.get(i);
+            int quantity = quantities.get(i);
+            System.out.println(productId);
+            System.out.println(quantity);
+
+            // 상품의 재고 체크
+            ProductEntity product = productService.getProductById(productId);
+            if (product != null) {
+                if (quantity <= product.getQuantity()) {
+                    // 장바구니에 추가
+                    cartService.addToCart(loginId, productId, quantity);
+
+                    // 상품의 재고 감소
+                    int remainingQuantity = product.getQuantity() - quantity;
+                    product.setQuantity(remainingQuantity);
+                    productService.saveProduct(product);
+                } else {
+                    // 재고 부족 예외 처리
+                    System.out.println("재고 부족");
+                    return "redirect:/?stock=lack";
+                }
+            } else {
+                throw new RuntimeException("Product not found with productId: " + productId);
+            }
+        }
+
+        // 장바구니 페이지로 리다이렉트
+        return "order";
+    }
+
+
+
+//    @PostMapping("/order")
+//    public String addToCart(HttpSession session,
+//                            @RequestParam("productId") Long productId,
+//                            @RequestParam("quantity") int quantity) {
+//        String loginId = (String) session.getAttribute("loginId");
+//        if (loginId == null) {
+//            // 로그인되지 않았을 경우 처리 로직 추가
+//            return "redirect:/login";
+//        }
+//
+////        MemberDTO memberDTO = memberService.getMemberByEmail(loginId);
+////        if (memberDTO == null) {
+////            // 회원 정보가 없을 경우 처리 로직 추가
+////            return "redirect:/login";
+////        }
+//        System.out.println(loginId);
+//        System.out.println(productId);
+//        System.out.println(quantity);
+//
+//        // 카트에 상품 추가
+//        cartService.addToCart(loginId, productId, quantity);
+//
+//        // 장바구니 페이지로 리다이렉트
+//        return "order";
+//    }
+
+//    @GetMapping("/order")
+//    public String orderForm(Model model, HttpSession session) {
+//    	String loginId = (String) session.getAttribute("loginId");
+//    	MemberDTO memberDTO = new MemberDTO();
+//    	memberDTO.setEmail(loginId);
+//    	MemberService.LoginResult loginResult = memberService.login(memberDTO);
+//    	
+//    	if (loginResult == MemberService.LoginResult.SUCCESS) {
+//    		List<CartEntity> cartItems = cartService.getCartItemsByLoginId(loginId);
+//    		model.addAttribute("cartItems", cartItems);
+//    		return "order";
+//    	} else {
+//    		System.out.println("로그인 되지 않음");
+//    		return "redirect:/login";
+//    	}
+//    }
+//    
+//    @PostMapping("/order")
+//    public String addToCart(@ModelAttribute MemberDTO memberDTO, HttpSession session, @RequestParam("productId") Long productId, @RequestParam("quantity") int quantity) {
+//        String loginId = (String) session.getAttribute("loginId");
+//        System.out.println("loginId = " + loginId);
+//        System.out.println(productId);
+//        System.out.println("quantity = " + quantity);
+//        
+////        if (loginId != null) {
+////            cartService.addToCart(loginId, productId, quantity);
+////            System.out.println(loginId);
+////            return "order";
+////        } else {
+////        	System.out.println("로그인 되지 않음");
+////            return "redirect:/member/login";
+////        }
+//        if (loginId != null) {
+//            ProductEntity product = productService.getProductById(productId);
+//            if (product != null) {
+//                if (quantity <= product.getQuantity()) {
+//                    // 장바구니에 추가
+//                    cartService.addToCart(loginId, productId, quantity);
+//
+//                    // 상품의 재고 감소
+//                    int remainingQuantity = product.getQuantity() - quantity;
+//                    product.setQuantity(remainingQuantity);
+//                    productService.saveProduct(product);
+//
+//                    return "order";
+//                } else {
+//                    // 재고 부족 예외 처리
+//                    System.out.println("재고 부족");
+//                    return "redirect:/?stock=lack";
+//                }
+//            } else {
+//                throw new RuntimeException("Product not found with productId: " + productId);
+//            }
+//        } else {
+//            System.out.println("로그인 되지 않음");
+//            return "redirect:/member/login";
+//        }
+//    
+//    }
+    
+
+}
+

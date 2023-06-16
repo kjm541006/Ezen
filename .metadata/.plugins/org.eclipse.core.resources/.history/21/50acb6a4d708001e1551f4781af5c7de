@@ -1,0 +1,32 @@
+package com.jumin.springbootProject.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.jumin.springbootProject.entity.ProductEntity;
+import com.jumin.springbootProject.service.ProductService;
+
+@Controller
+public class ProductController {
+
+	@Autowired
+    private ProductService productService;
+
+	@GetMapping("/main")
+	public String mainForm(Model model) {
+		List<ProductEntity> products = productService.getAllProducts();
+        model.addAttribute("products", products);
+        return "main";
+    }
+	
+	@PostMapping("/main")
+	public String mainOrderRequest(@RequestParam("pName") String pName) {
+		return "cart";
+	}
+}

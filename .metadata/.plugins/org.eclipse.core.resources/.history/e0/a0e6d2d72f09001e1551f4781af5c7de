@@ -1,0 +1,66 @@
+/* 로그인 폼 스타일 */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.login-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.login-email,
+.login-password {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.login-submit {
+  padding: 10px;
+  background-color: #3bafda;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  background-color: #1e8bc3;
+}
+
+.login-submit:active {
+  background-color: #137ca2;
+}
+
+.login-submit:focus {
+  outline: none;
+}
+
+a {
+  color: #3bafda;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

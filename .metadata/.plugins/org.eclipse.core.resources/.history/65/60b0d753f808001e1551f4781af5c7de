@@ -1,0 +1,32 @@
+package com.jumin.springbootProject.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jumin.springbootProject.entity.CartEntity;
+import com.jumin.springbootProject.entity.MemberEntity;
+import com.jumin.springbootProject.repository.CartRepository;
+import com.jumin.springbootProject.repository.MemberRepository;
+
+@Service
+public class CartService {
+
+    private final CartRepository cartRepository;
+    private final MemberRepository memberRepository;
+
+    @Autowired
+    public CartService(CartRepository cartRepository, MemberRepository memberRepository) {
+        this.cartRepository = cartRepository;
+        this.memberRepository = memberRepository;
+    }
+    
+    public List<CartEntity> getCartItemsByLoginId(String loginId) {
+        MemberEntity member = memberRepository.findByEmail(loginId)
+                .orElseThrow(() -> new RuntimeException("Member not found with loginId: " + loginId));
+        
+        return cartRepository.findByMember(member);
+    }
+    
+}

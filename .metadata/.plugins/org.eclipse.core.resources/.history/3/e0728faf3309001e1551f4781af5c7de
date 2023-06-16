@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<title>Join</title>
+	
+</head>
+<body>
+	<header class="header">
+		<div class="header-top" th:if="${session.loginId == null}">
+			<ul class="header-top-list">
+				<a href="/member/login">Log In</a>
+			</ul>
+		</div>
+		<div class="header-top" th:if="${session.loginId != null}">
+			<ul class="header-top-list">
+				<span th:text="${#session.getAttribute('loginName')} + '님 환영합니다'">
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/logout">로그아웃</a>
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/delete">회원탈퇴</a>
+			</ul>
+		</div>
+		<div class="header-logo">
+			<a href="/">SHOP</a>
+		</div>
+	</header>
+	<main class="main">
+		
+	<h1>회원가입 페이지 입니다.</h1>
+	<span th:text="${error}"></span>
+	<form action="/member/join" method="post">
+		이메일: <input type="text" name="email" />
+		비밀번호: <input type="password" name="password" />
+		이름: <input type="text" name="name" />
+		<input type="submit" value="회원가입" />
+	</form>
+	</main>
+</body>
+</html>

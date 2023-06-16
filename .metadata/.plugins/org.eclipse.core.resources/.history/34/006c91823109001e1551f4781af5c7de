@@ -1,0 +1,110 @@
+body{
+	box-sizing: border-box;
+	position: relative;
+}
+
+a{
+	text-decoration: none;
+	color: rgba(44, 44, 44, 1);
+}
+
+
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover {
+	cursor: pointer;
+}
+
+
+.header{
+	margin: 0 auto;
+	
+}
+
+.header-top{
+	height: 25px;
+	background-color: white;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 40px;
+	font-size: 1.1rem;
+}
+
+.header-top-list{
+	padding: 15px 10px;
+}
+
+.header-top-list > a:hover{
+	text-decoration: underline;
+}
+
+.header-logo{
+	height: 100px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.header-nav{
+	height: 60px;
+	margin: 0 auto;
+	background-color: ghostwhite;
+	opacity: 1;
+	font-size: 1.2rem;
+	position: sticky;
+	top: 0;
+	
+}
+
+.header-top-nav{
+	height: 100%;
+	padding: 0 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.header-top-nav-child{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 200px;
+	padding: 0 50px;
+	margin: 0 5px;
+}
+.header-top-nav-child > a{
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.header-top-nav-child:hover{
+	cursor: pointer;
+	background-color: rgb(230, 230, 255);
+}
+
+.header-top-nav-child:hover > a{
+	color:black;
+}
+
+.header-nav-active{
+	background-color: aliceblue;
+}
+
+.header-nav-active > a{
+	color:black;
+}
+
+.main{
+	
+	
+}
+
+.footer{
+	
+}

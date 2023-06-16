@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="reset.css" />
+	<link rel="stylesheet" href="style.css" />
+	<title>Home</title>
+</head>
+<body>
+	<container class="container">
+		<header class="header">
+			<div class="header-top">
+				<ul class="header-top-list">
+					<a href="/member/join">Join</a>
+				</ul>
+				<ul class="header-top-list">
+					<a href="/member/login">Log In</a>
+				</ul>
+			</div>
+			<div class="header-logo">
+				<a href="/main">SHOP</a>
+			</div>
+			<nav class="header-nav">
+				<ul class="header-top-nav">
+					<a href="/">BEST</a>
+				</ul>
+				<ul class="header-top-nav">
+					<a href="/">NEW</a>
+				</ul>
+			</nav>
+		</header>
+		<main class="main">
+			asdfsdffasfdsf
+		</main>
+		<footer class="footer">
+			안녕하세요
+		</footer>
+		<a href="/member/join">회원가입</a>
+		<a href="/member/login">로그인</a>
+	</container>
+</body>
+</html>

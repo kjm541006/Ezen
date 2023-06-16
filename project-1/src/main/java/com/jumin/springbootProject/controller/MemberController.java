@@ -7,9 +7,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.jumin.springbootProject.dto.MemberDTO;
 import com.jumin.springbootProject.service.MemberService;
+import com.jumin.springbootProject.service.MemberService.LoginResult;
 
 import lombok.RequiredArgsConstructor;
 
@@ -25,11 +27,18 @@ public class MemberController {
 	}
 	
 	@PostMapping("/member/join")
-	public String join( @ModelAttribute MemberDTO memberDTO) {
-		System.out.println("MemberController.save");
-		System.out.println(memberDTO);
-		memberService.save(memberDTO);
-		return "joinSuccess";
+	public String join( @ModelAttribute MemberDTO memberDTO, Model model) {
+		String joinResult = memberService.save(memberDTO);
+		if(joinResult == "fail") {
+			System.out.println("회원가입 에러");
+			model.addAttribute("error", "이미 존재하는 이메일입니다.");
+			return "join";
+		}else {
+			System.out.println("MemberController.save");
+			System.out.println(memberDTO);
+			memberService.save(memberDTO);
+			return "redirect:/member/login?join=success"; 
+		}
 	}
 	
 	@GetMapping("/member/login")
@@ -39,23 +48,54 @@ public class MemberController {
 	
 	@PostMapping("/member/login")
 	public String login(@ModelAttribute MemberDTO memberDTO, HttpSession session, Model model) {
-//		MemberDTO loginResult = memberService.login(memberDTO);
-		String loginResult = memberService.login(memberDTO);
-		if(loginResult == "success") {
-//			session.setAttribute("loginId", loginResult.getEmail());
-//			System.out.println(loginResult.getEmail());
-			System.out.println(loginResult);
-			return "main";
-		} else if(loginResult == "password error") {
-			model.addAttribute("error", "비밀번호가 일치하지 않습니다.");
-			return "login";
-		} else if(loginResult == "not found") {
+	    LoginResult loginResult = memberService.login(memberDTO);
+	    if(loginResult == LoginResult.SUCCESS) {
+	        session.setAttribute("loginName", memberDTO.getName());
+	        session.setAttribute("loginId", memberDTO.getEmail());
+	        System.out.println(memberDTO);
+	        return "redirect:/?loginId=" + memberDTO.getEmail();
+		} else if(loginResult == LoginResult.EMAIL_NOT_FOUND) {
 			model.addAttribute("error", "존재하지 않는 이메일입니다.");
+			return "login";
+		} else if(loginResult == LoginResult.INVALID_PASSWORD) {
+			model.addAttribute("error", "비밀번호가 일치하지 않습니다.");
 			return "login";
 		} else {
 			return "login";
 		}
 	}
 	
+	@GetMapping("/member/logout")
+	public String logout(HttpSession session) {
+	    session.invalidate(); // 세션 무효화
+	    return "redirect:/";
+	}
+	
+	@GetMapping("/member/delete")
+	public String deleteForm() {
+		return "delete";
+	}
+
+	@PostMapping("/member/delete")
+	public String deleteMember(@RequestParam("email") String email, @RequestParam("password") String password, HttpSession session, Model model) {
+	    String loginId = (String) session.getAttribute("loginId");
+	    
+	    // 로그인한 유저의 이메일과 입력한 이메일이 일치하는지 확인
+	    if (loginId.equals(email)) {
+	        // memberService의 delete 메소드를 호출하여 회원 삭제 수행
+	        boolean isDeleted = memberService.delete(email, password);
+	        if (isDeleted) {
+	            session.invalidate(); // 세션 무효화
+	            return "redirect:/?delete=success"; // 회원 삭제 성공 시 메인 페이지로 이동
+	        } else {
+	            model.addAttribute("error", "비밀번호가 잘못되었습니다.");
+	        }
+	    } else {
+	        model.addAttribute("error", "로그인한 유저의 이메일과 일치하지 않습니다.");
+	    }
+	    
+	    return "delete"; // 회원 삭제 실패 시 삭제 페이지로 이동
+	}
+
 	
 }

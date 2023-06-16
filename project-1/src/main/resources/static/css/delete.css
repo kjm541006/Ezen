@@ -1,0 +1,69 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.delete-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff0000; /* 빨간색 계열의 색상 */
+}
+
+.delete-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.delete-email,
+.delete-password {
+  padding: 10px;
+  border: 1px solid #ff0000; /* 빨간색 계열의 색상 */
+  border-radius: 5px;
+}
+
+.delete-name {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.delete-submit {
+  padding: 10px;
+  background-color: #ff0000; /* 빨간색 계열의 색상 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-submit:hover {
+  background-color: #e60000; /* 빨간색 계열의 색상 변화 */
+}
+
+.delete-submit:active {
+  background-color: #cc0000; /* 빨간색 계열의 색상 변화 */
+}
+
+.delete-submit:focus {
+  outline: none;
+}
+
+.delete-to-main {
+  margin-top: 15px;
+}
+
+.delete-to-main > a {
+  color: rgb(44,44,44); /* 빨간색 계열의 색상 */
+  text-decoration: none;
+}
+
+.delete-to-main > a:hover {
+  text-decoration: underline;
+}

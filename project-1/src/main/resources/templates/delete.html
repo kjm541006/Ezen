@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/delete.css" />
+	<title>회원탈퇴</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header-top">
+			<ul class="header-top-list">
+				<span th:text="${#session.getAttribute('loginName')} + '님 환영합니다'">
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/logout">로그아웃</a>
+			</ul>
+		</div>
+		<div class="header-logo">
+			<a href="/">SHOP</a>
+		</div>
+	</header>
+	<main class="main">
+		<span class="delete-header">회원탈퇴</span>
+		<form action="/member/delete" method="post" class="delete-form">
+		이메일: <input type="text" name="email" class="delete-email" />
+		비밀번호: <input type="password" name="password" class="delete-password" />
+		<span th:text="${error}" class="delete-name"></span>
+		<input type="submit" value="회원탈퇴" class="delete-submit" />
+	</form>
+	<div class="delete-to-main">		
+			<a href="/">구매할 물건이 있으신가요? 메인으로 돌아가기</a>
+		</div>
+	</main>
+	<footer class="footer">
+		푸터
+	</footer>
+</body>
+</html>

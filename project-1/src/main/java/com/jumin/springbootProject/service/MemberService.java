@@ -16,36 +16,55 @@ public class MemberService {
 	
 	private final MemberRepository memberRepository;
 
-	public void save(MemberDTO memberDTO) {
+	public String save(MemberDTO memberDTO) {
 		// dto -> entity
-		MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
-		// repository의 save 메서드호출 (entity객체 넘김)
-		memberRepository.save(memberEntity);
+		Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDTO.getEmail());
+		if(byEmail.isPresent()) {
+			return "fail";
+		}else {
+			
+			MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
+			// repository의 save 메서드호출 (entity객체 넘김)
+			memberRepository.save(memberEntity);
+			return "success";
+		}
+		
+	}
+	
+	public enum LoginResult {
+	    SUCCESS, // 로그인 성공
+	    EMAIL_NOT_FOUND, // 이메일을 찾을 수 없음
+	    INVALID_PASSWORD // 잘못된 비밀번호
+	}
+	
+	public LoginResult login(MemberDTO memberDTO) {
+	    Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDTO.getEmail());
+	    if (byEmail.isPresent()) {
+	        MemberEntity memberEntity = byEmail.get();
+	        if (memberEntity.getPassword().equals(memberDTO.getPassword())) {
+	        	memberDTO.setName(memberEntity.getName());
+	            return LoginResult.SUCCESS;
+	        } else {
+	            return LoginResult.INVALID_PASSWORD;
+	        }
+	    } else {
+	        return LoginResult.EMAIL_NOT_FOUND;
+	    }
+	}
+	
+	public boolean delete(String email, String password) {
+		Optional<MemberEntity> member = memberRepository.findByEmail(email);
+		if(member.isPresent()) {
+			MemberEntity memberEntity = member.get();
+			if(memberEntity.getPassword().equals(password)) {
+				memberRepository.delete(memberEntity);
+				return true;
+			}
+		}
+		return false;
 		
 	}
 
-	public String login(MemberDTO memberDTO) {
-		Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDTO.getEmail());
-		if(byEmail.isPresent()) {
-			// 조회결과가 있을경우
-			MemberEntity memberEntity = byEmail.get();
-			if(memberEntity.getPassword().equals(memberDTO.getPassword())) {
-				// 비밀번호 일치
-				// entity -> dto
-				MemberDTO dto = MemberDTO.toMemberDTO(memberEntity);
-				System.out.println(dto);
-				return "success";
-				
-			} else {
-				// 비밀번호 불일치
-				System.out.println("비밀번호 불일치");
-				return "password error";
-			}
-		}else {
-			// 조회결과가 없을경우
-			System.out.println("이메일 조회 실패");
-			return "not found";
-		}
-	}
+
 
 }

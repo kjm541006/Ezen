@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="reset.css" />
+	<link rel="stylesheet" href="style.css" />
+	<title>Home</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header-top" th:if="${session.loginId != null}">
+			<ul class="header-top-list">
+				<span th:text="${#session.getAttribute('loginId')} + '님'">
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/logout">로그아웃</a>
+			</ul>
+		</div>
+		<div class="header-logo">
+			<a href="/main">SHOP</a>
+		</div>
+	</header>
+	<nav class="header-nav">
+		<ul class="header-top-nav">
+			<a href="/">BEST</a>
+		</ul>
+		<ul class="header-top-nav">
+			<a href="/">NEW</a>
+		</ul>
+		<ul class="header-top-nav">
+			<a href="/">SALE</a>
+		</ul>
+	</nav>
+	<main class="main">
+		여기에 상품들이 들어갑니다.
+	</main>
+	<footer class="footer">
+		푸터
+	</footer>
+</body>
+</html>

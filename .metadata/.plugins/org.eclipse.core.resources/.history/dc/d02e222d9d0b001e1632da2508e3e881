@@ -1,0 +1,19 @@
+package com.jumin.springbootProject.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.jumin.springbootProject.entity.CartEntity;
+import com.jumin.springbootProject.entity.MemberEntity;
+
+@Repository
+public interface CartRepository extends JpaRepository<CartEntity, Long> {
+
+    List<CartEntity> findByMember(MemberEntity member);
+    
+    void deleteByProductId(Long productId);
+    
+
+}

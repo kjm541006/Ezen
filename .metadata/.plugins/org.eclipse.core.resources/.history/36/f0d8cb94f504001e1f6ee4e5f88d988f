@@ -1,9 +1,0 @@
-package com.jumin.springbootProject.member.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.jumin.springbootProject.member.repository.entity.Member;
-
-public interface MemberRepository{
-
-}

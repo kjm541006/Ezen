@@ -1,5 +1,0 @@
-package com.jumin.springbootProject.user.repository;
-
-public class UserRepository {
-
-}

@@ -1,0 +1,91 @@
+package com.jumin.springbootProject.controller;
+
+import java.util.Arrays;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.jumin.springbootProject.dto.MemberDTO;
+import com.jumin.springbootProject.entity.CartEntity;
+import com.jumin.springbootProject.entity.ProductEntity;
+import com.jumin.springbootProject.service.CartService;
+import com.jumin.springbootProject.service.MemberService;
+import com.jumin.springbootProject.service.ProductService;
+
+@Controller
+@RequestMapping("/")
+public class CartController {
+    private final CartService cartService;
+    private final ProductService productService;
+
+    @Autowired
+    public CartController(CartService cartService, ProductService productService, MemberService memberService) {
+        this.cartService = cartService;
+        this.productService = productService;
+    }
+    
+    @GetMapping("/order")
+    public String orderForm(Model model) {
+    	List<CartEntity> orders = cartService.getAllOrders();
+    	model.addAttribute("orders", orders);
+    	return "order";
+    }
+    
+    @PostMapping("/order")
+    public String addToCart(Model model, @ModelAttribute MemberDTO memberDTO, HttpSession session, @RequestParam("productId[]") Long[] productIds, @RequestParam("quantity[]") int[] quantities, int cost) {
+        String loginId = (String) session.getAttribute("loginId");
+        System.out.println("loginId = " + loginId);
+
+        if (loginId != null) {
+            for (int i = 0; i < productIds.length; i++) {
+                Long productId = productIds[i];
+                int quantity = quantities[i];
+
+                ProductEntity product = productService.getProductById(productId);
+                if (product != null) {
+                    if (quantity <= product.getQuantity()) {
+                        // 장바구니에 추가
+                        cartService.addToCart(loginId, productId, quantity, cost);
+
+                        // 상품의 재고 감소
+                        int remainingQuantity = product.getQuantity() - quantity;
+                        System.out.println("현재 재고: " + product.getQuantity());
+                        System.out.println("구매 수량: " + quantity);
+                        System.out.println("남은 재고: " + remainingQuantity);
+                        product.setQuantity(remainingQuantity);
+                        productService.saveProduct(product);
+                    } else {
+                        // 재고 부족 예외 처리
+                        System.out.println("재고 부족");
+                        int remainingQuantity = product.getQuantity() - quantity;
+                        System.out.println("현재 재고: " + product.getQuantity());
+                        System.out.println("구매 수량: " + quantity);
+                        System.out.println("남은 재고: " + remainingQuantity);
+                        return "redirect:/?stock=lack";
+                    }
+                } else {
+                    throw new RuntimeException("Product not found with productId: " + productId);
+                }
+            }
+            List<CartEntity> orders = cartService.getAllOrders();
+            model.addAttribute("orders", orders);
+            return "order";
+        } else {
+            System.out.println("로그인 되지 않음");
+            return "redirect:/member/login";
+        }
+    }
+
+    
+
+}
+

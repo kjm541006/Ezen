@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/main.css" />
+	<title>Home</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header-top" th:if="${session.loginId == null}">
+			<ul class="header-top-list">
+				<a href="/member/join">Join</a>
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/login">Log In</a>
+			</ul>
+		</div>
+		<div class="header-top" th:if="${session.loginId != null}">
+			<ul class="header-top-list">
+				<span th:text="${#session.getAttribute('loginName')} + '님 환영합니다'">
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/logout">로그아웃</a>
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/delete">회원탈퇴</a>
+			</ul>
+		</div>
+		<div class="header-logo">
+			<a href="/">SHOP</a>
+		</div>
+	</header>
+	<nav class="header-nav">
+		<div class="header-top-nav">
+			<div class="header-top-nav-best header-top-nav-child">
+				<a href="/best">BEST</a>
+			</div>
+			<div class="header-top-nav-new header-top-nav-child">
+				<a href="/new">NEW</a>
+			</div>
+			<div class="header-top-nav-sale header-top-nav-child">
+				<a href="/sale">SALE</a>
+			</div>
+		</div>
+	</nav>
+	<main class="main">
+		<div class="carousel">
+			<img src="/img/main-img2.jpg" alt="메인이미지" class="main-img" />
+		</div>
+		<div class="products">
+			<form action="/order" method="post">
+    <div class="products-lists">
+        <div class="products-list" th:each="product, status : ${products}">
+            <div class="products-img">
+                <img th:src="@{'' + ${product.image}}" alt="상품이미지" />
+            </div>
+            <div class="products-detail">
+                <div class="name" th:text="|상품명: ${product.name}|"></div>
+                <div class="detail" th:text="${product.description}"></div>
+                <div class="price" th:text="|가격: ${product.price}원|"></div>
+                <div class="quantity" th:text="|남은수량: ${product.quantity}|"></div>
+                
+                <div class="quantity" th:if="${product.quantity > 0}">
+                    <input type="hidden" name="productId[]" th:value="${product.id}" />
+                    <input type="number" name="quantity[]" value="0" th:id="'quantity' + ${status.index}"/>
+                    <button onclick="handlePlus(event, '' + ${status.index})" th:id="'plus-btn' + ${status.index}">+</button>
+										<button th:onclick="handleMinus(event, '' + ${status.index})" th:id="'minus-btn' + ${status.index}">-</button>
+
+                </div>
+                <div class="quantity" th:if="${product.quantity <= 0}">
+                    <span class="quantity-zero">구매불가</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submit">
+        <button type="submit">주문하기</button>
+    </div>
+</form>
+
+
+
+		</div>
+	</main>
+	<footer class="footer">
+		푸터영역
+	</footer>
+	
+	<script>
+	    // URL에서 delay 파라미터 값 가져오기
+	    const urlParams = new URLSearchParams(window.location.search);
+	    const deleteUser = urlParams.get('delete');
+	    const stockError = urlParams.get('stock');
+	    
+	    const minusBtn = document.querySelector('#minus-btn');
+	    const plusBtn = document.querySelector('#plus-btn');
+	
+	    if (deleteUser == "success") {
+	        alert('탈퇴가 성공적으로 처리되었습니다.');
+	        window.location.href = '/';
+	    }
+	    
+	    if(stockError == "lack"){
+			alert('재고가 부족합니다.');
+			window.location.href = '/';
+		}
+		
+		function checkValidateForm() {
+	        var checkedCount = document.querySelectorAll('input[type="checkbox"][name="productIds"]:checked').length;
+	        
+	        if (checkedCount === 0) {
+	            alert("최소한 하나의 상품을 선택해야 합니다.");
+	            event.preventDefault(); // form 제출을 막습니다.
+	        }
+	    }
+	    
+	    function handlePlus(e, index) {
+				e.preventDefault();
+				console.log("plus");
+			  let input = document.getElementById('quantity' + index);
+				console.log(input);
+			  let value = parseInt(input.value);
+			  console.log(value);
+			  input.value = value + 1;
+			}
+			
+			function handleMinus(e, index) {
+				e.preventDefault();
+				console.log('minus');
+			  let input = document.getElementById('quantity' + index);
+			  console.log(input);
+			  let value = parseInt(input.value);
+			  console.log(value);
+			  if (value > 0) {
+			    input.value = value - 1;
+			  }
+			}
+
+	    
+	  minusBtn.addEventListener('click', handleMinus);
+	  plusBtn.addEventListener('click', handlePlus);
+	    
+	    
+	    
+	</script>
+
+</body>
+</html>

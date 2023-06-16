@@ -1,0 +1,69 @@
+package com.jumin.springbootProject.service;
+
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.jumin.springbootProject.dto.MemberDTO;
+import com.jumin.springbootProject.entity.MemberEntity;
+import com.jumin.springbootProject.repository.MemberRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class MemberService {
+	
+	private final MemberRepository memberRepository;
+
+	public String save(MemberDTO memberDTO) {
+		// dto -> entity
+		Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDTO.getEmail());
+		if(byEmail.isPresent()) {
+			return "fail";
+		}else {
+			
+			MemberEntity memberEntity = MemberEntity.toMemberEntity(memberDTO);
+			// repository의 save 메서드호출 (entity객체 넘김)
+			memberRepository.save(memberEntity);
+			return "success";
+		}
+		
+	}
+	
+	public enum LoginResult {
+	    SUCCESS, // 로그인 성공
+	    EMAIL_NOT_FOUND, // 이메일을 찾을 수 없음
+	    INVALID_PASSWORD // 잘못된 비밀번호
+	}
+	
+	public LoginResult login(MemberDTO memberDTO) {
+	    Optional<MemberEntity> byEmail = memberRepository.findByEmail(memberDTO.getEmail());
+	    if (byEmail.isPresent()) {
+	        MemberEntity memberEntity = byEmail.get();
+	        if (memberEntity.getPassword().equals(memberDTO.getPassword())) {
+	        	memberDTO.setName(memberEntity.getName());
+	            return LoginResult.SUCCESS;
+	        } else {
+	            return LoginResult.INVALID_PASSWORD;
+	        }
+	    } else {
+	        return LoginResult.EMAIL_NOT_FOUND;
+	    }
+	}
+	
+	public boolean delete(String email, String password) {
+		Optional<MemberEntity> member = memberRepository.findByEmail(email);
+		if(member.isPresent()) {
+			MemberEntity memberEntity = member.get();
+			if(memberEntity.getPassword().equals(password)) {
+				memberRepository.delete(memberEntity);
+				return true;
+			}
+		}
+		return false;
+		
+	}
+
+
+}

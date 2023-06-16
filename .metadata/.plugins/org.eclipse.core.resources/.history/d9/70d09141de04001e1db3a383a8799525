@@ -1,5 +1,0 @@
-package com.jumin.springbootProject.member.repository.entity;
-
-public class Member {
-
-}

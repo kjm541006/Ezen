@@ -1,0 +1,12 @@
+package com.jumin.springbootProject.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.jumin.springbootProject.entity.ShopEntity;
+
+public interface ShopRepository extends JpaRepository<ShopEntity, Long> {
+
+	Optional<ShopEntity> findByName(String name);
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/order.css" />
+	<title>order</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header-top" th:if="${session.loginId == null}">
+			<ul class="header-top-list">
+				<a href="/member/join">Join</a>
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/login">Log In</a>
+			</ul>
+		</div>
+		<div class="header-top" th:if="${session.loginId != null}">
+			<ul class="header-top-list">
+				<span th:text="${#session.getAttribute('loginName')} + '님 환영합니다'">
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/logout">로그아웃</a>
+			</ul>
+			<ul class="header-top-list">
+				<a href="/member/delete">회원탈퇴</a>
+			</ul>
+		</div>
+		<div class="header-logo">
+			<a href="/">SHOP</a>
+		</div>
+	</header>
+	<nav class="header-nav">
+		<div class="header-top-nav">
+			<div class="header-top-nav-best header-top-nav-child">
+				<a href="/best">BEST</a>
+			</div>
+			<div class="header-top-nav-new header-top-nav-child">
+				<a href="/new">NEW</a>
+			</div>
+			<div class="header-top-nav-sale header-top-nav-child">
+				<a href="/sale">SALE</a>
+			</div>
+		</div>
+	</nav>
+	<main class="main">
+		<div class="main-header">
+			<h1>구매내역</h1>			
+		</div>
+		<table>
+        <tr>
+            <th>상품명</th>
+            <th>수량</th>
+            <th>가격</th>
+            <th>총 가격</th>
+            <th>삭제</th>
+        </tr>
+        <tr th:each="order : ${orders}" th:if="${order.quantity} > 0">
+            <td th:text="${order.product.name}"></td>
+            <td th:text="${order.quantity}"></td>
+            <td th:text="${order.product.price}"></td>
+            <td th:text="${order.totalPrice}"></td>
+            <td>
+	            <form th:action="@{/order/remove}" method="post">
+	                <input type="hidden" name="id" th:value="${order.id}" />
+	                <button type="submit">Remove</button>
+	            </form>
+						</td>
+        </tr>
+    </table>
+    
+    <div class="to-main">
+			<a href="/">더 구매하기</a>
+		</div>
+	</main>
+</body>
+</html>

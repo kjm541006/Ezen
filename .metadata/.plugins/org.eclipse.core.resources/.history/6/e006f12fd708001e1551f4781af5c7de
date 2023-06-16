@@ -1,0 +1,24 @@
+package com.jumin.springbootProject.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.jumin.springbootProject.service.ProductService;
+
+@Controller
+public class ProductController {
+
+	@GetMapping("/main")
+	public String mainForm(Model model) {
+		model.addAttribute("products", ProductService.getAllProducts());
+        return "main"; // products.html 또는 출력할 템플릿의 이름
+    }
+	
+	@PostMapping("/main")
+	public String mainOrderRequest(@RequestParam("pName") String pName) {
+		return "cart";
+	}
+}

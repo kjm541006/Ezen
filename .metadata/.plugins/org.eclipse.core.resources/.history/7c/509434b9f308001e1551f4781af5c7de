@@ -1,0 +1,78 @@
+package com.jumin.springbootProject.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import com.jumin.springbootProject.dto.ProductDTO;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Setter
+@Getter
+@Table(name = "products")
+public class ProductEntity {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column(unique = true)
+	private String name;
+	
+	private int price;
+	
+	private int quantity;
+	
+	private String image;
+	
+	private String description;
+	
+	private boolean isNew;
+	
+	private int discountRate;
+	
+	// 상품 불러오기
+//	public static ProductEntity toShopEntity(ProductDTO productDTO) {
+//		ProductEntity productEntity = new ProductEntity();
+//		productEntity.setId(productDTO.getId());
+//		productEntity.setName(productDTO.getName());
+//		productEntity.setPrice(productDTO.getPrice());
+//		productEntity.setQuantity(productDTO.getQuantity());
+//		productEntity.setNew(productDTO.isNew());
+//		productEntity.setDiscountRate(productDTO.getDiscountRate());
+//		
+//		return productEntity;
+//	}
+	
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<CartEntity> carts = new ArrayList<>();
+
+    // Constructors
+
+    public ProductEntity() {
+    }
+
+    public ProductEntity(String name, int price, int quantity, String image, String description, boolean isNew, int discountRate) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.image = image;
+        this.description = description;
+        this.isNew = isNew;
+        this.discountRate = discountRate;
+    }
+	
+	
+
+}

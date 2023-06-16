@@ -1,0 +1,5 @@
+package com.jumin.springbootProject.entity;
+
+public class ShopEntity {
+
+}

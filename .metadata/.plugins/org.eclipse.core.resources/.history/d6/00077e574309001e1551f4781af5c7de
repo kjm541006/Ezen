@@ -1,0 +1,20 @@
+package com.jumin.springbootProject.dto;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+public class CartDTO {
+	private Long productId;
+    private int quantity;
+
+    public CartDTO(Long productId, int quantity) {
+        this.productId = productId;
+        this.quantity = quantity;
+    }
+}

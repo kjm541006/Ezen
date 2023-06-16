@@ -1,0 +1,28 @@
+package com.jumin.springbootProject.service;
+
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.jumin.springbootProject.dto.ShopDTO;
+import com.jumin.springbootProject.entity.ShopEntity;
+import com.jumin.springbootProject.repository.ShopRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Service
+@RequiredArgsConstructor
+public class ShopService {
+
+	private final ShopRepository shopRepository;
+	
+	public String save(ShopDTO shopDTO) {
+		// dto -> entity
+		Optional<ShopEntity> byName = shopRepository.findByName(shopDTO.getName());
+		if(byName.isPresent()) {
+			return "fail";
+		}else {
+			return "success";
+		}
+	}
+}
